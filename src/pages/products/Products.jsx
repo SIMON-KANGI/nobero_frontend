@@ -12,7 +12,7 @@ function Products() {
 
     const FetchProducts = useCallback(async () => {
         try {
-            const res = await axios.get("http://127.0.0.1:8000/products/");
+            const res = await axios.get("https://api.npoint.io/71c82a35b9942f277a90");
             setProducts(res.data);
         } catch (error) {
             console.error("Error fetching products:", error);
