@@ -50,6 +50,11 @@ function Products() {
             setScrolling(false);
         }
     }, [scrolling]);
+    function clearFilter(){
+        setFilterPrice([0, Infinity]);
+        setName('');
+        setVisibleProducts(12);
+    }
 
     return (
         <div className='flex w-screen overflow-y-auto'>
@@ -60,6 +65,7 @@ function Products() {
                     filterPrice={filterPriceRange} 
                     setName={setName} 
                     name={name} 
+                    clearFilter={clearFilter}
                 />
             </section>
             <section className='w-3/4 mr-8'>
